@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="1221.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tool.AssegnazioniController" >
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="40.0" prefWidth="160.0" spacing="10.0" style="-fx-background-color: #f7e69d;">
+               <children>
+                  <Label text="Seleziona Azienda">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox prefWidth="150.0" />
+                  <Label text="Progetti attivi">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <ListView prefHeight="400.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="350.0" spacing="10.0" style="-fx-background-color: #1b3f6c;">
+               <children>
+                  <Label text="Risorse Assegnate" textFill="#e8dede">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TableView prefHeight="500.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn prefWidth="111.0" text="Nome" />
+                      <TableColumn prefWidth="102.0" text="Progetto" />
+                        <TableColumn prefWidth="136.0" text="Ore" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="350.0" spacing="10.0" style="-fx-background-color: #3e8c41;">
+               <children>
+                  <Label text="Seleziona risorsa" textFill="#f2eaea" />
+                  <ComboBox prefWidth="150.0" />
+                  <Label text="Ore disponibili" textFill="#fffafa" />
+                  <TableView prefHeight="200.0" prefWidth="200.0">
+                    <columns>
+                      <TableColumn prefWidth="175.0" text="Mese" />
+                      <TableColumn prefWidth="174.0" text="Ora" />
+                    </columns>
+                  </TableView>
+                  <Button mnemonicParsing="false" text="Salva" />
+                  <Button mnemonicParsing="false" text="Pulisci foglio" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

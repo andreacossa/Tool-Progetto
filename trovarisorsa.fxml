@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="723.0" prefWidth="1192.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tool.AssegnazioniController">
+
+    <!-- TOP -->
+    <top>
+        <HBox spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="8" left="8" right="8" top="8" />
+            </padding>
+            <children>
+                <Label text="Seleziona Progetto" />
+                <ComboBox fx:id="comboProgettoTop" prefWidth="150.0" />
+
+                <Label text="Seleziona Mese" />
+                <ComboBox fx:id="comboMeseTop" prefWidth="150.0" />
+
+                <Label text="Seleziona Anno" />
+                <ComboBox fx:id="comboAnnoTop" prefWidth="150.0" />
+
+                <Label text="Ore" />
+                <TextField fx:id="txtOreTop" />
+            </children>
+        </HBox>
+    </top>
+
+    <!-- LEFT -->
+    <left>
+        <TableView fx:id="tableRisorse" prefWidth="250.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn text="Nome" />
+                <TableColumn text="Ore disponibili" />
+            </columns>
+        </TableView>
+    </left>
+
+    <!-- CENTER -->
+    <center>
+        <VBox spacing="12.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="12" left="12" right="12" top="12" />
+            </padding>
+
+            <children>
+                <Label text="Effettua Assegnazione">
+                    <font>
+                        <Font size="18" />
+                    </font>
+                </Label>
+
+                <GridPane hgap="10" vgap="8">
+                    <columnConstraints>
+                        <ColumnConstraints prefWidth="100" />
+                        <ColumnConstraints prefWidth="100" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints prefHeight="30" />
+                        <RowConstraints prefHeight="30" />
+                        <RowConstraints prefHeight="30" />
+                    </rowConstraints>
+
+                    <children>
+                        <ComboBox fx:id="comboRisorsa" promptText="Risorsa" />
+
+                        <ComboBox fx:id="comboProgetto" promptText="Progetto" GridPane.rowIndex="1" />
+
+                        <ComboBox fx:id="comboAnno" promptText="Anno" GridPane.columnIndex="1" />
+
+                        <ComboBox fx:id="comboMese" promptText="Mese" GridPane.rowIndex="2" />
+
+                        <ComboBox fx:id="comboOre" promptText="Ore" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    </children>
+                </GridPane>
+
+                <HBox spacing="8">
+                    <children>
+                        <Button fx:id="btnValida" onAction="#handleValida" text="Valida" />
+                        <Button fx:id="btnSalva" onAction="#handleSalva" text="Salva" />
+                        <Button fx:id="btnPulisci" onAction="#handlePulisci" text="Pulisci" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- RIGHT -->
+    <right>
+        <VBox spacing="8" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Disponibilità" />
+                <ListView fx:id="listDisponibilita" />
+                <Button fx:id="btnPulisciFoglio" onAction="#handlePulisciFoglio" text="Pulisci Foglio" />
+            </children>
+        </VBox>
+    </right>
+
+</BorderPane>

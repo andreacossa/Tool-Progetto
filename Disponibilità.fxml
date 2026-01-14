@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="824.0" prefWidth="1215.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.tool.AssegnazioniController" >
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #2d5da8;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="32.0" prefWidth="249.0" text="Gestione Assegnazioni" textFill="#e1d7d7">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="1215.0">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Label text="Risorsa">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <ComboBox prefWidth="150.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="100.0" prefWidth="1215.0">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label text="Anno">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <ComboBox prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="130.0" prefHeight="100.0" prefWidth="1215.0">
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label text="Mese">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <ComboBox prefWidth="150.0" />
+               </children>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="1214.0">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="111.0" text="Assegnazioni">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TableView prefHeight="51.0" prefWidth="1184.0">
+                          <columns>
+                            <TableColumn prefWidth="277.0" text="Risorsa" />
+                            <TableColumn prefWidth="284.0" text="Progetto" />
+                              <TableColumn prefWidth="308.0" text="Mese" />
+                              <TableColumn prefWidth="314.0" text="Ora" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffffff;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <children>
+                  <Label text="Nuova Assegnazione">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Progetto" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Ore" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="80.0" prefWidth="1086.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="163.0" style="-fx-background-color: #e09f3e;" text="Convalida" />
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="163.0" style="-fx-background-color: #2ba84a;" text="Salva" />
+                              <Button layoutX="173.0" layoutY="10.0" mnemonicParsing="false" prefHeight="79.0" prefWidth="163.0" style="-fx-background-color: #d64545;" text="Pulisci" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow />
+         </effect>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+         <children>
+            <Label text="Disponibilità" />
+            <ListView prefHeight="680.0" prefWidth="70.0" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

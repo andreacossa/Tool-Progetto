@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="375.0" layoutY="21.0" prefHeight="367.0" prefWidth="372.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Risorsa" />
+          <TableColumn prefWidth="75.0" text="Progetto" />
+            <TableColumn prefWidth="75.0" text="Mese" />
+            <TableColumn prefWidth="75.0" text="Anno" />
+            <TableColumn prefWidth="75.0" text="Ore" />
+        </columns>
+      </TableView>
+      <VBox layoutX="30.0" layoutY="41.0" prefHeight="323.0" prefWidth="304.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Risorsa" />
+            <TextField />
+            <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Progetto" />
+            <TextField layoutX="10.0" layoutY="27.0" />
+            <Text layoutX="10.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mese" />
+            <TextField layoutX="10.0" layoutY="69.0" />
+            <Text layoutX="10.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anno" />
+            <TextField layoutX="10.0" layoutY="111.0" />
+            <Text fontSmoothingType="LCD" layoutX="10.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ore" />
+            <TextField layoutX="10.0" layoutY="153.0" />
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="303.0" text="Aggiungi" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
